@@ -1,0 +1,12 @@
+@layout('layout.master')
+@section('content')
+    <form action="/create" method="POST">
+        <label for="">Staff Name</label>
+        <input type="text" name="StaffName">
+
+        <label for="">Staff Code</label>
+        <input type="text" name="StaffCode">
+
+        <button type="submit">Create</button>
+    </form>
+@endsection

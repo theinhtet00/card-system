@@ -1,0 +1,23 @@
+@layout('layout.master')
+@section('content')
+<h1>Staffs</h1>
+<a href="/create">Create</a>
+<table>
+    <tr>
+        <td>Staff Name</td>
+        <td>Staff Code</td>
+        <td></td>
+    </tr>
+    @each(staff in staffs)
+    <tr>
+        <td>{{staff.StaffName}}</td>
+        <td>{{staff.StaffCode}}</td>
+        <td>
+            <a href="/edit/{{staff.staffId}}">edit</a>
+            <a href="/delete/{{staff.staffId}}">delete</a>
+        </td>
+    </tr>
+    @endeach
+</table>
+
+@endsection

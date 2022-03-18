@@ -1,0 +1,13 @@
+@layout('layout.master')
+@section('content')
+<form action="/edit/{{staff.staffId}}" method="POST">
+
+    <label for="">Staff Name</label>
+    <input type="text" name="StaffName" value="{{staff.StaffName}}">
+
+    <label for="">Staff Code</label>
+    <input type="text" name="StaffCode" value="{{staff.StaffCode}}">
+
+    <button type="submit">Update</button>
+</form>
+@endsection
